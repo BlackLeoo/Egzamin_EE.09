@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  font-family: Garamond, sans-serif;
+}
+.banner,
+.stopka {
+  background: #3cb371;
+  color: #fff;
+  padding: 10px;
+  font-size: 1.3rem;
+  /* flex zastepuje text-align: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* text-align: center; */
+  clear: both;
+}
+.lewy {
+  background: #faebd7;
+  width: 55%;
+  height: 450px;
+  float: left;
+}
+.lewy img {
+  margin: 15px;
+  padding: 3px;
+  border: 2px dashed #3cb371;
+  width: 500px;
+  height: auto;
+}
+.prawy {
+  background: #faebd7;
+  width: 45%;
+  height: 450px;
+  float: left;
+}
+.prawy h3 {
+  margin: 15px;
+}
