@@ -1,0 +1,4 @@
+kw1 - SELECT `id`, `nazwa`, `wystepowanie` FROM `ryby` WHERE `styl_zycia`=2;
+kw2 - SELECT `akwen`, `wojewodztwo` FROM `lowisko` WHERE `rodzaj` = 2 OR `rodzaj` = 3;
+kw3 - SELECT nazwa FROM ryby, okres_ochronny WHERE ryby.id = okres_ochronny.Ryby_id AND od_miesiaca = 0;
+kw4 - CREATE TABLE `wedkowanie`.`wedkarze` ( `id` INT UNSIGNED NOT NULL , `imie` TEXT CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL , `nazwisko` TEXT CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL , `punkty` INT UNSIGNED NOT NULL ) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_unicode_ci;
