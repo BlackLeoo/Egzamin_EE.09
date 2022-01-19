@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    font-family: Verdana, sans-serif;
+    background: #fff;
+  }
+  .banner,
+  .stopka {
+    background: #4682b4;
+    color: #ffffff;
+    padding: 20px;
+    font-size: 1.2rem;
+    text-align: center;
+    clear: both;
+  }
+  .lewy {
+    background: #40e0d0;
+    width: 40%;
+    height: 500px;
+    float: left;
+  }
+  .lewy ul {
+    margin: 40px;
+  }
+  .prawy {
+    background: #40e0d0;
+    width: 60%;
+    height: 500px;
+    float: left;
+  }
+  .prawy img {
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid #000080;
+    width: 550px;
+    height: auto;
+  }
