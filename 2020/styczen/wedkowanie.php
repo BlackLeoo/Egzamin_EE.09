@@ -19,36 +19,34 @@
       </section>
       <section class="prawy">
         <h3>Ryby spokojnego żeru (białe)</h3>
-<?php
-        $server = 'localhost';
-        $user = 'root';
-        $password = '';
-        $db = 'wedkowanie';
+        <?php
 
-        $conn = mysqli_connect($server, $user, $password, $db);
+            $sever = 'localhost';
+            $user = 'root';
+            $passw = '';
+            $db = 'wedkowanie';
+            
+            $conn = mysqli_connect($sever, $user, $passw, $db);
 
-        if(!$conn) {
-            echo 'Brak połaczenia z baza:' . mysqli_error($conn);
-        }else {
-            // echo 'ok';
-            $sql = "SELECT id, nazwa, wystepowanie FROM ryby WHERE styl_zycia=2";
-            $zapytanie = mysqli_query($conn, $sql);
-            // print_r($zapytanie);
+            if(!$conn) {
+                echo 'Brak połaczenia z baza:' . mysqli_error($conn);
+            } else {
+                echo '<br>';
+                
+                $sql = 'SELECT `id`, `nazwa`, `wystepowanie` FROM `ryby` WHERE `styl_zycia`=2;';
+                $zapytanie = mysqli_query($conn, $sql);
+                // print_r($zapytanie);
 
-            if(mysqli_num_rows($zapytanie) > 0) {
+                if(mysqli_num_rows($zapytanie) > 0 ) {
 
-                while($wynik = mysqli_fetch_row($zapytanie)) {
-                    echo $wynik[0] . '. ' . $wynik[1] . ', występuje w: ' . $wynik[2].'<br>';
+                    while($wpisy = mysqli_fetch_row($zapytanie)) {
+                        echo $wpisy[0].'. '. $wpisy[1].', występuje w: '. $wpisy[2] . '<br>';
+                    }
+                   echo '<br>'; 
                 }
             }
-
-
-
-        }
-
-
-
-?>
+            mysqli_close($conn);
+        ?>
         <ol>
           <li>
             <a href="https://wedkuje.pl/" target="_blank">Odwiedź także</a>
